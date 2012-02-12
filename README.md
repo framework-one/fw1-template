@@ -1,6 +1,6 @@
 # fw1-template
 
-A Leiningen template for FW/1 (Framework One).
+A [Leiningen](https://github.com/technomancy/leiningen) template for [FW/1](https://github.com/seancorfield/fw1-clj) (Framework One).
 
 ## Usage
 
