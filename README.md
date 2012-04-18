@@ -14,12 +14,16 @@ lein plugin install lein-newnew X.Y.Z
 
 where X.Y.Z is the latest [version from Clojars](http://clojars.org/lein-newnew).
 
-For Leiningen 2.x, the updated 'new' task already supports templates.
-
 Then install fw1-template:
 
 ```
-lein plugin install fw1-template 0.0.6
+lein plugin install fw1-template 0.1.0
+```
+
+For Leiningen 2.x, the updated 'new' task already supports templates and you install plugins and templates by adding the dependency to your ~/.lein/profile.clj file:
+
+```
+{:user {:plugins {fw1-template "0.1.0"}}}
 ```
 
 ### Creating a New FW/1 Project
@@ -38,6 +42,6 @@ PORT=8888 lein run
 
 ## License
 
-Copyright © 2012 Sean Corfield
+Copyright (c) 2012 Sean Corfield
 
 Distributed under the Eclipse Public License, the same as Clojure.
