@@ -4,27 +4,7 @@ A [Leiningen](https://github.com/technomancy/leiningen) template for [FW/1](http
 
 ## Usage
 
-### One-Off Setup
-
-For Leiningen 1.x, first install the [newnew plugin](https://github.com/Raynes/lein-newnew):
-
-```
-lein plugin install lein-newnew X.Y.Z
-```
-
-where X.Y.Z is the latest [version from Clojars](http://clojars.org/lein-newnew).
-
-Then install fw1-template:
-
-```
-lein plugin install fw1-template 0.1.0
-```
-
-For Leiningen 2.x, the updated 'new' task already supports templates and you install plugins and templates by adding the dependency to your ~/.lein/profile.clj file:
-
-```
-{:user {:plugins {fw1-template "0.1.0"}}}
-```
+Requires Leiningen 2.0.
 
 ### Creating a New FW/1 Project
 
