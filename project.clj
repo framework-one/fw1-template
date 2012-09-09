@@ -1,4 +1,4 @@
-(defproject fw1/lein-template "0.1.0"
+(defproject fw1/lein-template "0.1.1"
   :description "FW/1 template for lein newnew"
   :url "https://github.com/seancorfield/fw1-template/"
   :license {:name "Eclipse Public License"
