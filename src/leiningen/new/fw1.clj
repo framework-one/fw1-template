@@ -1,5 +1,5 @@
 (ns leiningen.new.fw1
-    (:use leiningen.new.templates :only [renderer name-to-path ->files]))
+    (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]))
 
 (def render (renderer "fw1"))
 

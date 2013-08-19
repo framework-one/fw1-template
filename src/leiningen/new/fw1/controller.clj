@@ -1,5 +1,5 @@
 (ns {{name}}.controllers.main
-  (:use framework.one))
+  (:require [framework.one :as fw1]))
 
 (defn default "/main/default handler" [rc]
   rc)
