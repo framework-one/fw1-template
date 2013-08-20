@@ -5,5 +5,6 @@
 (defn -main[]
   (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))] 
     (run-jetty
-      (fw1/start :application-key "{{name}}")
+     (fw1/start :application-key "{{name}}"
+                :template :selmer)
       {:port port})))
