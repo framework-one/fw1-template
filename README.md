@@ -1,6 +1,6 @@
 # fw1-template
 
-A [Leiningen](https://github.com/technomancy/leiningen) template for [FW/1](https://github.com/seancorfield/fw1-clj) (Framework One).
+A [Leiningen](https://github.com/technomancy/leiningen) template for [FW/1](https://github.com/framework-one/fw1-clj) (Framework One).
 
 ## Usage
 
@@ -22,6 +22,6 @@ PORT=8888 lein run
 
 ## License
 
-Copyright (c) 2012 Sean Corfield
+Copyright (c) 2012-2013 Sean Corfield
 
 Distributed under the Eclipse Public License, the same as Clojure.
