@@ -22,6 +22,6 @@ PORT=8888 lein run
 
 ## License
 
-Copyright (c) 2012-2013 Sean Corfield
+Copyright (c) 2012-2014 Sean Corfield
 
 Distributed under the Eclipse Public License, the same as Clojure.
