@@ -1,5 +1,5 @@
-(ns leiningen.new.fw1
-    (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]))
+(ns boot.new.fw1
+    (:require [boot.new.templates :refer [renderer name-to-path ->files]]))
 
 (def render (renderer "fw1"))
 
@@ -11,7 +11,7 @@
               :body "{{body}}"}]
     (->files data
              ["README.md" (render "README.md" data)]
-             ["project.clj" (render "project.clj" data)]
+             ["build.boot" (render "build.boot" data)]
              [".gitignore" (render "gitignore" data)]
              ["src/{{sanitized}}/main.clj" (render "main.clj" data)]
              ["src/{{sanitized}}/controllers/main.clj" (render "controller.clj" data)]
