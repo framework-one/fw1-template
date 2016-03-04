@@ -1,4 +1,4 @@
-(def version "0.5.0")
+(def version "0.5.1")
 
 (task-options!
  pom {:project     'fw1/boot-template
