@@ -9,6 +9,10 @@
       :file        (str "{{name}}-" version "-standalone.jar")})
 
 (set-env! :resource-paths #{"src"}
+          ;; the org.clojure/clojure dependency here only affects
+          ;; what is bundled in the uberjar via the build task so
+          ;; be careful if it is different to the version you have
+          ;; configured for Boot!
           :dependencies   '[[org.clojure/clojure "RELEASE"]
                             [framework-one       "RELEASE"]])
 
