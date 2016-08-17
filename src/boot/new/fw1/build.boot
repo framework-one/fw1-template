@@ -20,6 +20,7 @@
   (comp (aot) (pom) (uber) (jar) (target :dir #{"target"})))
 
 (deftask run
-  [a args ARG [str] "the arguments for the application."]
+  [p port    PORT    int      "the port on which to run the application."
+   c config  ARG=VAL {kw str} "the config map for the application."]
   (require '[{{name}}.main :as app])
-  (apply (resolve 'app/-main) args))
+  ((resolve 'app/start) port config))

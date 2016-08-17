@@ -3,7 +3,17 @@
             [ring.adapter.jetty :refer [run-jetty]])
   (:gen-class))
 
-(defn -main []
-  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
-    (run-jetty (fw1/start :application-key "{{name}}")
+(defn start
+  "Entry point from Boot file, also called by -main."
+  [port config-map]
+  (let [port (or port (System/getenv "PORT") 8080)
+        port (cond-> port (string? port) Integer/parseInt)]
+    (run-jetty (fw1/start (merge {:application-key "{{name}}"} config-map))
                {:port port})))
+
+(defn -main
+  "Entry point from uberjar etc. Customize as you wish!
+  By default, only uses PORT environment variable, not arguments,
+  to determine the port on which to run."
+  [& args]
+  (start nil {}))
