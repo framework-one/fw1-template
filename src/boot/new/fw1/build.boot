@@ -8,13 +8,16 @@
  jar {:main        '{{name}}.main
       :file        (str "{{name}}-" version "-standalone.jar")})
 
-(set-env! :resource-paths #{"src"}
+(set-env! :resource-paths #{"src" "resources"}
           ;; the org.clojure/clojure dependency here only affects
           ;; what is bundled in the uberjar via the build task so
           ;; be careful if it is different to the version you have
           ;; configured for Boot!
           :dependencies   '[[org.clojure/clojure "RELEASE"]
-                            [framework-one       "RELEASE"]])
+                            [framework-one       "RELEASE"]
+                                        ; comment this out if you don't want
+                                        ; to use http-kit at all:
+                            [http-kit            "RELEASE"]])
 
 (deftask build []
   (comp (aot) (pom) (uber) (jar) (target :dir #{"target"})))
